@@ -2,30 +2,41 @@
 <html lang="id">
 <head>
     <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1363788345128651'); 
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1363788345128651&ev=PageView&noscript=1"
-/></noscript>
-<meta charset="UTF-8" />
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1363788345128651'); 
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1363788345128651&ev=PageView&noscript=1"
+    /></noscript>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jasa Desain - Landing Page</title>
+    
+    <meta name="description" content="Jasa Desain Logo Profesional Khusus Kantor Hukum, Notaris, dan Pengacara. Desain Berfilosofi Hukum, Revisi Fleksibel, Harga Terjangkau. Konsultasi GRATIS sekarang!" />
+    
+    <title>Jasa Desain Logo Profesional Kantor Hukum - PT. Kamallogo</title>
+    
     <style>
         body { margin: 0; font-family: Arial, sans-serif; background: #f8f8f8; color: #222; }
-        header { padding: 80px 20px; text-align: center; background: #111; color: white; }
+        /* PERBAIKAN KONTRAST DI HEADER: Ubah background header agar tulisan putih mudah dibaca */
+        header { padding: 80px 20px; text-align: center; background: #000; color: white; } 
         header h1 { font-size: 48px; margin: 0; }
         header p { font-size: 20px; margin-top: 10px; }
-        /* Perubahan di sini: .btn sekarang memiliki onclick event untuk Lead */
-        .btn { display: inline-block; padding: 14px 28px; background: #25d366; color: white; text-decoration: none; font-size: 20px; border-radius: 8px; margin-top: 20px; }
+        
+        .btn { 
+            display: inline-block; padding: 14px 28px; background: #25d366; color: white; 
+            text-decoration: none; font-size: 20px; border-radius: 8px; margin-top: 20px;
+            /* Tambahkan efek hover untuk pengalaman pengguna yang lebih baik */
+            transition: background 0.3s;
+        }
+        .btn:hover { background: #1da957; }
 
         section { padding: 60px 20px; max-width: 1100px; margin: auto; }
         .title { font-size: 32px; margin-bottom: 20px; text-align: center; }
@@ -38,26 +49,59 @@ src="https://www.facebook.com/tr?id=1363788345128651&ev=PageView&noscript=1"
         .price-box { background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.12); }
         .price-box h3 { font-size: 26px; margin-bottom: 10px; }
         .price { font-size: 34px; margin: 10px 0 20px; font-weight: bold; }
+        
+        /* Gaya baru untuk tombol di dalam price-box */
+        .price-box .btn-select { 
+            background: #007bff; /* Warna biru untuk "Pilih Paket" */
+            margin-top: 15px; 
+            padding: 10px 20px; 
+            font-size: 18px; 
+        }
+        .price-box .btn-select:hover { background: #0056b3; }
 
         .portfolio, .testi-items { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
         .img-box { width: 100%; border-radius: 12px; overflow: hidden; }
         .img-box img { width: 100%; height: auto; display: block; }
+        
+        /* GAYA TOMBOL FLOATING WHATSAPP */
+        .floating-wa {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            /* Tambahkan ikon WA (menggunakan Font Awesome atau sejenisnya jika tersedia, jika tidak, pakai teks) */
+        }
+        .floating-wa:hover { background: #1da957; }
+
 
         footer { text-align: center; padding: 30px; background: #111; color: white; margin-top: 40px; }
-            /* RESPONSIVE */
+        
+        /* RESPONSIVE */
         @media (max-width: 768px) {
             header h1 { font-size: 28px; }
             header p { font-size: 16px; }
             .title { font-size: 24px; }
             .portfolio { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+            .floating-wa { bottom: 10px; right: 10px; font-size: 16px; padding: 10px 15px; }
         }
 
         /* TESTIMONI IMAGE FIX */
-        .testi-items img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            border-radius: 10px;
+        .testi-items .testi-box img {
+            width: 80px; /* Ukuran foto testimoni lebih kecil */
+            height: 80px;
+            border-radius: 50%; /* Bulat */
+            object-fit: cover;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -65,11 +109,13 @@ src="https://www.facebook.com/tr?id=1363788345128651&ev=PageView&noscript=1"
 
     <header>
         <h1>PT. Kamallogo Digital Kreatif</h1>
-        <p>Melayani pembuatan desain Logo berkualitas dengan harga terjangkau</p>
+        
+        <p>Jasa Desain Logo Profesional **KHUSUS KANTOR HUKUM & NOTARIS** Berfilosofi Hukum</p>
         <p>Dipercaya lebih dari 2.500 Perusahaan & UMKM</p>
-        <p>"Jangan Buang Waktu! Dapatkan konsultasi desain logo kantor hukum Anda GRATIS dengan spesialis kami. Klik WA di bawah ini sekarang!"</p>
-        <a class="btn" href="https://wa.me/6281131122225" target="_blank" onclick="fbq('track', 'Lead');">Konsultasi via WhatsApp (Gratis)</a>
-    </header>
+        
+        <p style="color: #25d366; font-weight: bold;">"Jangan Buang Waktu! Dapatkan konsultasi desain logo kantor hukum Anda GRATIS dengan spesialis kami. Hubungi kami sekarang!"</p>
+        
+        </header>
 
     <section>
         <div class="title">Keunggulan Layanan Kami</div>
@@ -83,64 +129,58 @@ src="https://www.facebook.com/tr?id=1363788345128651&ev=PageView&noscript=1"
     <section>
         <div class="title">Portofolio Logo Kantor Hukum</div>
         <div class="portfolio">
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/1.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/2.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/3.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/4.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/5.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/6.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/7.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/8.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/9.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/10.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/11.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/12.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/13.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/14.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/15.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/16.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/17.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/18.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/19.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/20.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/21.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/22.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/23.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/24.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/25.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/26.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/27.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/28.png"></div>
-            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/29.png"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/1.png" alt="Logo Kantor Hukum Desain Profesional 1"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/2.png" alt="Logo Kantor Hukum Desain Profesional 2"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/3.png" alt="Logo Kantor Hukum Desain Profesional 3"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/4.png" alt="Logo Kantor Hukum Desain Profesional 4"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/5.png" alt="Logo Kantor Hukum Desain Profesional 5"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/6.png" alt="Logo Kantor Hukum Desain Profesional 6"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/7.png" alt="Logo Kantor Hukum Desain Profesional 7"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/8.png" alt="Logo Kantor Hukum Desain Profesional 8"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/9.png" alt="Logo Kantor Hukum Desain Profesional 9"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/10.png" alt="Logo Kantor Hukum Desain Profesional 10"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/11.png" alt="Logo Kantor Hukum Desain Profesional 11"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/12.png" alt="Logo Kantor Hukum Desain Profesional 12"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/13.png" alt="Logo Kantor Hukum Desain Profesional 13"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/14.png" alt="Logo Kantor Hukum Desain Profesional 14"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/15.png" alt="Logo Kantor Hukum Desain Profesional 15"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/16.png" alt="Logo Kantor Hukum Desain Profesional 16"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/17.png" alt="Logo Kantor Hukum Desain Profesional 17"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/18.png" alt="Logo Kantor Hukum Desain Profesional 18"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/19.png" alt="Logo Kantor Hukum Desain Profesional 19"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/20.png" alt="Logo Kantor Hukum Desain Profesional 20"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/21.png" alt="Logo Kantor Hukum Desain Profesional 21"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/22.png" alt="Logo Kantor Hukum Desain Profesional 22"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/23.png" alt="Logo Kantor Hukum Desain Profesional 23"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/24.png" alt="Logo Kantor Hukum Desain Profesional 24"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/25.png" alt="Logo Kantor Hukum Desain Profesional 25"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/26.png" alt="Logo Kantor Hukum Desain Profesional 26"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/27.png" alt="Logo Kantor Hukum Desain Profesional 27"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/28.png" alt="Logo Kantor Hukum Desain Profesional 28"></div>
+            <div class="img-box"><img src="https://raw.githubusercontent.com/mkamal03031991/portfolio-logo/main/29.png" alt="Logo Kantor Hukum Desain Profesional 29"></div>
         </div>
-            </div>
     </section>
 
 <section style="padding:40px 20px; font-family:Arial, sans-serif;">
 <div class="title" style="text-align:center; font-size:28px; margin-bottom:25px; font-weight:bold;">Testimoni Pelanggan</div>
-
-
 <div class="testi-items" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; max-width:1100px; margin:auto;">
 
-
 <div class="testi-box" style="background:white; padding:20px; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.1); text-align:center;">
-<img src="https://via.placeholder.com/300x200" alt="Testimoni 1" style="width:100%; height:auto; border-radius:10px;">
+<img src="https://via.placeholder.com/100x100?text=Klien+1" alt="Foto Klien Fatmawati S.H." style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:10px;">
 <h3 style="margin:10px 0 5px;">Fatmawati, S.H.</h3>
 <p style="font-size:12px; color:#666; font-style:italic; margin-top:-2px;">Kantor Hukum Fatmawati, S.H. & Rekan</p>
 <p style="font-size:14px; color:#444;">"Desainnya bagus banget, revisi cepat dan hasilnya memuaskan!"</p>
 </div>
 
-
 <div class="testi-box" style="background:white; padding:20px; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.1); text-align:center;">
-<img src="https://via.placeholder.com/300x200" alt="Testimoni 2" style="width:100%; height:auto; border-radius:10px;">
+<img src="https://via.placeholder.com/100x100?text=Klien+2" alt="Foto Klien Ibnu Nurdin Sambuana" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:10px;">
 <h3 style="margin:10px 0 5px;"> Ibnu Nurdin Sambuana, S.H., M.H.</h3>
 <p style="font-size:12px; color:#666; font-style:italic; margin-top:-2px;">Law Office Ibnu Nurdin Sambuana, S.H., M.H. & Partners </p>
 <p style="font-size:14px; color:#444;">"Pelayanan ramah, desain profesional, sangat direkomendasikan!"</p>
 </div>
 
-
 <div class="testi-box" style="background:white; padding:20px; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.1); text-align:center;">
-<img src="https://via.placeholder.com/300x200" alt="Testimoni 3" style="width:100%; height:auto; border-radius:10px;">
+<img src="https://via.placeholder.com/100x100?text=Klien+3" alt="Foto Klien Faisal Tanjung" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:10px;">
 <h3 style="margin:10px 0 5px;">Faisal Tanjung, S.H., M.H.</h3>
 <p style="font-size:12px; color:#666; font-style:italic; margin-top:-2px;">Law Office Faisal Tanjung, S.H., M.H. & Partners</p>
 <p style="font-size:14px; color:#444;">"Harga terjangkau tapi kualitas premium. Mantap!"</p>
@@ -157,40 +197,55 @@ src="https://www.facebook.com/tr?id=1363788345128651&ev=PageView&noscript=1"
                 <h3>Basic</h3>
                 <div class="price">100rb</div>
                 <p>• Batas revisi 6x<br>• File PNG, CDR & PDF</p>
-                <a class="btn" href="https://wa.me/6281131122225" target="_blank" onclick="fbq('track', 'Lead');">Konsultasi GRATIS via WhatsApp</a>
+                <a class="btn btn-select" 
+                   href="https://wa.me/6281131122225?text=Halo%2C%20saya%20tertarik%20dengan%20Paket%20Basic%20Desain%20Logo%20100rb.%20Mohon%20info%20lebih%20lanjut." 
+                   target="_blank" onclick="fbq('track', 'AddToCart', {content_name: 'Basic', value: 100000});">
+                   Pilih Paket Ini
+                </a>
             </div>
 
             <div class="price-box">
                 <h3>Standar</h3>
                 <div class="price">150rb</div>
                 <p>• Batas revisi 10x<br>• File PNG, CDR & PDF<br>• Bonus desain kop surat</p>
-                <a class="btn" href="https://wa.me/6281131122225" target="_blank" onclick="fbq('track', 'Lead');">Konsultasi GRATIS via WhatsApp</a>
+                <a class="btn btn-select" 
+                   href="https://wa.me/6281131122225?text=Halo%2C%20saya%20tertarik%20dengan%20Paket%20Standar%20Desain%20Logo%20150rb.%20Mohon%20info%20lebih%20lanjut." 
+                   target="_blank" onclick="fbq('track', 'AddToCart', {content_name: 'Standar', value: 150000});">
+                   Pilih Paket Ini
+                </a>
             </div>
 
             <div class="price-box">
                 <h3>Premium</h3>
                 <div class="price">250rb</div>
                 <p>• Batas revisi 15x<br>• File PNG, CDR & PDF<br>• Bonus kop surat, kartu nama, desain stempel</p>
-                <a class="btn" href="https://wa.me/6281131122225" target="_blank" onclick="fbq('track', 'Lead');">Konsultasi GRATIS via WhatsApp</a>
+                <a class="btn btn-select" 
+                   href="https://wa.me/6281131122225?text=Halo%2C%20saya%20tertarik%20dengan%20Paket%20Premium%20Desain%20Logo%20250rb.%20Mohon%20info%20lebih%20lanjut." 
+                   target="_blank" onclick="fbq('track', 'AddToCart', {content_name: 'Premium', value: 250000});">
+                   Pilih Paket Ini
+                </a>
             </div>
 
             <div class="price-box">
                 <h3>Extra Premium</h3>
                 <div class="price">350rb</div>
                 <p>• Batas revisi unlimited<br>• File PNG, CDR & PDF<br>• Bonus kop surat, kartu nama, desain stempel, filosofi logo</p>
-                <a class="btn" href="https://wa.me/6281131122225" target="_blank" onclick="fbq('track', 'Lead');">Konsultasi GRATIS via WhatsApp</a>
+                <a class="btn btn-select" 
+                   href="https://wa.me/6281131122225?text=Halo%2C%20saya%20tertarik%20dengan%20Paket%20Extra%20Premium%20Desain%20Logo%20350rb.%20Mohon%20info%20lebih%20lanjut." 
+                   target="_blank" onclick="fbq('track', 'AddToCart', {content_name: 'Extra Premium', value: 350000});">
+                   Pilih Paket Ini
+                </a>
             </div>
         </div>
-    </section>
-
-    <section style="text-align:center;">
-        <div class="title">"Siap Tampil Beda? Konsultasikan Desain Anda Sekarang."</div>
-        <a class="btn" href="https://wa.me/6281131122225" target="_blank" onclick="fbq('track', 'Lead');">Konsultasi via WhatsApp (Gratis)</a>
     </section>
 
     <footer>
         © 2025 - Jasa Desain Logo | PT. Kamallogo Digital Kreatif - Situbondo, Jawa Timur | Kontak: 0811-3112-2225
     </footer>
+    
+    <a class="floating-wa" href="https://wa.me/6281131122225?text=Halo%20Kamallogo%2C%20saya%20mau%20konsultasi%20desain%20logo%20kantor%20hukum." target="_blank" onclick="fbq('track', 'Lead');">
+        💬 Konsultasi GRATIS via WA
+    </a>
 
 </body>
 </html>
